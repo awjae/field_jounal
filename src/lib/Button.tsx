@@ -15,6 +15,16 @@ const StyledAddButton = styled(Button)<ButtonProps>(({ theme }) => ({
   transform: 'translateX(-50%)',
 }))
 
-export function AddButton({ children }: { children: React.ReactNode }) {
-  return <StyledAddButton variant="contained">{children}</StyledAddButton>
+export function AddButton({
+  children,
+  handleClick,
+}: {
+  children: React.ReactNode
+  handleClick: React.MouseEventHandler
+}) {
+  return (
+    <StyledAddButton variant="contained" onClick={handleClick}>
+      {children}
+    </StyledAddButton>
+  )
 }

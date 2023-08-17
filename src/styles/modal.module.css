@@ -1,0 +1,8 @@
+.addModal {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.addModal > div:last-of-type {
+  margin-top: auto;
+}
