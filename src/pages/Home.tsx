@@ -26,9 +26,24 @@ function Home() {
       <Modal open={open} handleClick={setOpen}>
         <div className={styles.addModal}>
           <div>
-            <input type="text" placeholder="업체" />
-            <input type="text" placeholder="지역" />
-            <input type="text" placeholder="상세내역" />
+            <input
+              type="text"
+              placeholder="업체"
+              value={form.title}
+              onChange={(e) => setForm((prevState) => ({ ...prevState, title: e.target.value }))}
+            />
+            <input
+              type="text"
+              placeholder="지역"
+              value={form.locate}
+              onChange={(e) => setForm((prevState) => ({ ...prevState, locate: e.target.value }))}
+            />
+            <input
+              type="text"
+              placeholder="상세내역"
+              value={form.detail}
+              onChange={(e) => setForm((prevState) => ({ ...prevState, detail: e.target.value }))}
+            />
           </div>
           <div>
             <button onClick={() => setOpen(false)}>취소</button>
